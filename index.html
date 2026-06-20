@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[FIRST NAME] [LAST NAME]</title>
+  <meta name="description" content="[FIRST NAME] [LAST NAME] — [YEAR] · [UNIVERSITY]" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══ CURSOR ══════════════════════════════════════════════ -->
+  <div id="cursor" aria-hidden="true"></div>
+
+  <!-- ══ NAV ════════════════════════════════════════════════ -->
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">[FIRST NAME]<span class="nav-accent">.</span></a>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══ HERO ════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <div class="hero-type">
+        <div class="line-clip">
+          <h1 class="hero-name">[FIRST NAME]</h1>
+        </div>
+        <div class="line-clip">
+          <h2 class="hero-role">Software Engineer</h2>
+        </div>
+      </div>
+
+      <div class="hero-sub">
+        <span class="hero-meta">[YEAR] · [UNIVERSITY]</span>
+        <a class="hero-cta" href="#projects">View Work ↓</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ═══════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-inner">
+
+      <div class="about-col-bio">
+        <span class="sec-label">About</span>
+        <p class="about-p">[SHORT BIO — one tight paragraph, 2–3 sentences max. State what you build, where you study, what you want next. No "I am passionate about." No adjectives that don't mean anything.]</p>
+      </div>
+
+      <div class="about-col-skills">
+        <span class="sec-label">Skills</span>
+        <ul class="skill-list">
+          <li>[SKILL 1]</li>
+          <li>[SKILL 2]</li>
+          <li>[SKILL 3]</li>
+          <li>[SKILL 4]</li>
+          <li>[SKILL 5]</li>
+          <li>[SKILL 6]</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ════════════════════════════════════════════ -->
+  <section id="projects">
+
+    <div class="proj-head">
+      <span class="sec-label">Selected Work</span>
+      <span class="proj-hint">Scroll →</span>
+    </div>
+
+    <div class="proj-track" id="projTrack">
+
+      <article class="proj-card">
+        <div class="pc-top">
+          <span class="pc-num">01</span>
+          <a class="pc-arrow" href="[GITHUB URL 1]" target="_blank" rel="noopener" aria-label="View [PROJECT TITLE 1] on GitHub">↗</a>
+        </div>
+        <h3 class="pc-title">[PROJECT TITLE 1]</h3>
+        <p class="pc-desc">[ONE LINE DESCRIPTION 1]</p>
+        <div class="pc-tech">
+          <span>[TECH 1]</span>
+          <span>[TECH 2]</span>
+          <span>[TECH 3]</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="pc-top">
+          <span class="pc-num">02</span>
+          <a class="pc-arrow" href="[GITHUB URL 2]" target="_blank" rel="noopener" aria-label="View [PROJECT TITLE 2] on GitHub">↗</a>
+        </div>
+        <h3 class="pc-title">[PROJECT TITLE 2]</h3>
+        <p class="pc-desc">[ONE LINE DESCRIPTION 2]</p>
+        <div class="pc-tech">
+          <span>[TECH 1]</span>
+          <span>[TECH 2]</span>
+          <span>[TECH 3]</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="pc-top">
+          <span class="pc-num">03</span>
+          <a class="pc-arrow" href="[GITHUB URL 3]" target="_blank" rel="noopener" aria-label="View [PROJECT TITLE 3] on GitHub">↗</a>
+        </div>
+        <h3 class="pc-title">[PROJECT TITLE 3]</h3>
+        <p class="pc-desc">[ONE LINE DESCRIPTION 3]</p>
+        <div class="pc-tech">
+          <span>[TECH 1]</span>
+          <span>[TECH 2]</span>
+          <span>[TECH 3]</span>
+        </div>
+      </article>
+
+      <!-- trailing spacer so last card isn't flush to viewport edge -->
+      <div class="proj-spacer" aria-hidden="true"></div>
+
+    </div>
+
+    <div class="proj-progress-bar">
+      <div class="proj-progress-fill" id="projFill"></div>
+    </div>
+
+  </section>
+
+  <!-- ══ EXPERIENCE ══════════════════════════════════════════ -->
+  <section id="experience">
+    <div class="exp-inner">
+
+      <span class="sec-label">Experience</span>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-top">
+              <span class="tl-role">[ROLE TITLE 1]</span>
+              <span class="tl-date">[DATE RANGE 1]</span>
+            </div>
+            <p class="tl-org">[COMPANY / ORG 1]</p>
+            <p class="tl-desc">[1–2 lines. Lead with impact, then method. Numbers if you have them.]</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-top">
+              <span class="tl-role">[ROLE TITLE 2]</span>
+              <span class="tl-date">[DATE RANGE 2]</span>
+            </div>
+            <p class="tl-org">[COMPANY / ORG 2]</p>
+            <p class="tl-desc">[1–2 lines.]</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-top">
+              <span class="tl-role">[ROLE TITLE 3]</span>
+              <span class="tl-date">[DATE RANGE 3]</span>
+            </div>
+            <p class="tl-org">[COMPANY / ORG / COURSE — label honestly if academic]</p>
+            <p class="tl-desc">[1–2 lines.]</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ═════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-inner">
+      <span class="sec-label">Contact</span>
+      <a class="contact-email" href="mailto:[EMAIL]">[EMAIL]</a>
+      <div class="contact-links">
+        <a href="[GITHUB URL]" target="_blank" rel="noopener">GitHub</a>
+        <span aria-hidden="true">·</span>
+        <a href="[LINKEDIN URL]" target="_blank" rel="noopener">LinkedIn</a>
+        <span aria-hidden="true">·</span>
+        <a href="[RESUME PDF URL]" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GSAP via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

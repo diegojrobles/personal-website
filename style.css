@@ -1,0 +1,563 @@
+/* ================================================================
+   DESIGN SYSTEM
+   Palette : #F8F7F4 bg · #0C0C0C fg · #0057FF accent
+   Type    : Space Grotesk (body/display) · JetBrains Mono (labels)
+   Rules   : no text gradients · no floating shadows · borders only
+================================================================ */
+
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --bg:      #F8F7F4;
+  --fg:      #0C0C0C;
+  --muted:   #6E6E6E;
+  --accent:  #0057FF;
+  --border:  #0C0C0C;
+
+  --sans: 'Space Grotesk', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+
+  /* Horizontal padding for every section */
+  --gutter: clamp(1.5rem, 5vw, 5rem);
+  /* Vertical section rhythm */
+  --vpad:   clamp(5rem, 10vh, 8rem);
+
+  --nav-h: 56px;
+}
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  line-height: 1.5;
+  cursor: none;          /* replaced by custom dot */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a   { color: inherit; text-decoration: none; }
+ul  { list-style: none; }
+img { display: block; max-width: 100%; }
+
+/* ── Custom Cursor ──────────────────────────────────────────── */
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  /* No transition — zero lag */
+}
+
+/* ── Section Label (mono tag above every section heading) ───── */
+.sec-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 2.5rem;
+}
+
+/* ================================================================
+   NAV
+================================================================ */
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  /* invisible until JS adds .is-visible */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#nav.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-inner {
+  width: 100%;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.nav-accent { color: var(--accent); }
+
+#nav nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+#nav nav a {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  transition: color 0.15s;
+}
+
+#nav nav a:hover { color: var(--fg); }
+
+/* ================================================================
+   HERO
+================================================================ */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--vpad) var(--gutter) calc(var(--vpad) * 0.75);
+}
+
+/* Clip wrapper — hides text below baseline so it can slide up from beneath */
+.line-clip {
+  display: block;
+  overflow: hidden;
+}
+
+.hero-name {
+  font-size: clamp(4rem, 17vw, 16rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  color: var(--fg);
+}
+
+/* Outline / stroke only — creates the Swiss poster contrast */
+.hero-role {
+  font-size: clamp(4rem, 17vw, 16rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--fg);
+}
+
+.hero-sub {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2.75rem;
+}
+
+.hero-meta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.hero-cta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--fg);
+  border-bottom: 1px solid var(--fg);
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.hero-cta:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ================================================================
+   ABOUT
+================================================================ */
+#about {
+  padding: var(--vpad) var(--gutter);
+  border-top: 1px solid var(--border);
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
+}
+
+.about-p {
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--fg);
+  max-width: 460px;
+}
+
+.skill-list li {
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg);
+}
+
+.skill-list li:first-child { border-top: 1px solid var(--border); }
+
+/* ================================================================
+   PROJECTS  (horizontal pin scroll)
+================================================================ */
+#projects {
+  border-top: 1px solid var(--border);
+  padding-top: var(--vpad);
+  height: 100vh;           /* exact viewport height while pinned */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.proj-head {
+  flex-shrink: 0;
+  padding: 0 var(--gutter) 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.proj-head .sec-label { margin-bottom: 0; }
+
+.proj-hint {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+/* The scrolling strip */
+.proj-track {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  padding-left: var(--gutter);
+  will-change: transform;
+}
+
+/* ── Project Card ─────────────────────────────────────────── */
+.proj-card {
+  flex-shrink: 0;
+  width: clamp(280px, 40vw, 540px);
+  border: 1px solid var(--fg);
+  margin-right: -1px;      /* collapse double borders between cards */
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  /* INSTANT background flip — zero transition */
+  background: var(--bg);
+  color: var(--fg);
+  transition: none;
+}
+
+.proj-card:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Children that carry their own color must also flip */
+.proj-card:hover .pc-num    { color: rgba(255,255,255,0.5); }
+.proj-card:hover .pc-arrow  { color: #fff; }
+.proj-card:hover .pc-desc   { color: rgba(255,255,255,0.75); }
+.proj-card:hover .pc-tech span {
+  color: #fff;
+  border-color: rgba(255,255,255,0.35);
+}
+
+.pc-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: auto;     /* push title/desc/tech to bottom */
+}
+
+.pc-num {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  transition: none;
+}
+
+.pc-arrow {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--fg);
+  transition: none;
+  line-height: 1;
+}
+
+.pc-title {
+  font-size: clamp(1.4rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-top: auto;
+  margin-bottom: 0.65rem;
+}
+
+.pc-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 1.75rem;
+  transition: none;
+}
+
+.pc-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.pc-tech span {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.55rem;
+  transition: none;
+}
+
+/* Trailing spacer keeps last card from butting against viewport edge */
+.proj-spacer {
+  flex-shrink: 0;
+  width: var(--gutter);
+}
+
+/* Thin progress line below cards */
+.proj-progress-bar {
+  flex-shrink: 0;
+  height: 1px;
+  background: rgba(12,12,12,0.12);
+  margin: 1.5rem var(--gutter) 0;
+}
+
+.proj-progress-fill {
+  height: 100%;
+  background: var(--fg);
+  transform-origin: left center;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+/* ================================================================
+   EXPERIENCE
+================================================================ */
+#experience {
+  padding: var(--vpad) var(--gutter);
+  border-top: 1px solid var(--border);
+}
+
+.exp-inner { max-width: 680px; }
+
+.timeline {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+/* The vertical rule */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.tl-item {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-dot {
+  position: absolute;
+  left: -1.875rem;         /* sits on the vertical rule */
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.tl-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.tl-role {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.tl-date {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+}
+
+.tl-org {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.tl-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 520px;
+}
+
+/* ================================================================
+   CONTACT
+================================================================ */
+#contact {
+  padding: var(--vpad) var(--gutter);
+  border-top: 1px solid var(--border);
+}
+
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: clamp(1.5rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--fg);
+  transition: color 0.15s;
+}
+
+.contact-email:hover { color: var(--accent); }
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.contact-links a {
+  color: var(--muted);
+  transition: color 0.15s;
+}
+
+.contact-links a:hover { color: var(--fg); }
+.contact-links span    { color: var(--muted); user-select: none; }
+
+/* ================================================================
+   RESPONSIVE
+================================================================ */
+
+/* ── Tablet ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .proj-card {
+    width: clamp(260px, 72vw, 480px);
+  }
+}
+
+/* ── Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Restore native cursor on touch */
+  body   { cursor: auto; }
+  #cursor { display: none; }
+
+  /* Shrink nav links */
+  #nav nav { gap: 1.25rem; }
+
+  /* Hero sub stacks */
+  .hero-sub {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  /* Projects: disable horizontal scroll, stack vertically */
+  #projects {
+    height: auto;
+    overflow: visible;
+  }
+
+  .proj-track {
+    flex-direction: column;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  .proj-card {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: -1px;
+    min-height: 280px;
+  }
+
+  .proj-spacer,
+  .proj-progress-bar { display: none; }
+
+  /* Timeline date drops below role on small screens */
+  .tl-top {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+/* ── Very small phones ──────────────────────────────────────── */
+@media (max-width: 420px) {
+  #nav nav { display: none; }   /* too cramped; user scrolls to sections */
+}
