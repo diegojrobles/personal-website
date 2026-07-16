@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[FIRST NAME] [LAST NAME]</title>
-  <meta name="description" content="[FIRST NAME] [LAST NAME] — [YEAR] · [UNIVERSITY]" />
+  <title>Diego Robles</title>
+  <meta name="description" content="Diego Robles — Computer Science · Software Engineer" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,7 +20,7 @@
   <!-- ══ NAV ════════════════════════════════════════════════ -->
   <header id="nav">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">[FIRST NAME]<span class="nav-accent">.</span></a>
+      <a href="#hero" class="nav-logo">Diego<span class="nav-accent">.</span></a>
       <nav aria-label="Primary">
         <a href="#about">About</a>
         <a href="#projects">Work</a>
@@ -32,24 +32,48 @@
 
   <!-- ══ HERO ════════════════════════════════════════════════ -->
   <section id="hero">
-    <div class="hero-inner">
 
-      <div class="hero-type">
-        <div class="line-clip">
-          <h1 class="hero-name">[FIRST NAME]</h1>
-        </div>
-        <div class="line-clip">
-          <h2 class="hero-role">Software Engineer</h2>
-        </div>
-      </div>
-
-      <div class="hero-sub">
-        <span class="hero-meta">[YEAR] · [UNIVERSITY]</span>
-        <a class="hero-cta" href="#projects">View Work ↓</a>
-      </div>
-
+    <div class="hero-badge-row">
+      <span class="hero-badge">Available for Internships 2026</span>
     </div>
+
+    <div class="hero-type">
+      <div class="line-clip">
+        <h1 class="hero-name">Diego Robles</h1>
+      </div>
+      <div class="line-clip">
+        <h2 class="hero-role">Computer Science</h2>
+      </div>
+    </div>
+
+    <div class="hero-sub">
+      <span class="hero-meta">[YEAR] · [UNIVERSITY]</span>
+      <div class="hero-actions">
+        <a class="btn btn-accent" href="#projects">View Work ↓</a>
+        <a class="btn btn-ghost" href="[RESUME_URL]" target="_blank" rel="noopener">Resume ↗</a>
+      </div>
+    </div>
+
   </section>
+
+  <!-- ══ TICKER ══════════════════════════════════════════════ -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item">Software Engineering</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Full Stack Development</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Machine Learning</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Systems Programming</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">API Design</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Open to Internships</span><span class="ticker-dot">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">Software Engineering</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Full Stack Development</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Machine Learning</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Systems Programming</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">API Design</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Open to Internships</span><span class="ticker-dot">✦</span>
+    </div>
+  </div>
 
   <!-- ══ ABOUT ═══════════════════════════════════════════════ -->
   <section id="about">
@@ -62,14 +86,22 @@
 
       <div class="about-col-skills">
         <span class="sec-label">Skills</span>
-        <ul class="skill-list">
-          <li>[SKILL 1]</li>
-          <li>[SKILL 2]</li>
-          <li>[SKILL 3]</li>
-          <li>[SKILL 4]</li>
-          <li>[SKILL 5]</li>
-          <li>[SKILL 6]</li>
-        </ul>
+        <div class="skill-grid">
+          <span class="skill-tag hi">Python</span>
+          <span class="skill-tag hi">C</span>
+          <span class="skill-tag hi">TypeScript</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">ChromaDB</span>
+          <span class="skill-tag">HuggingFace</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Linux</span>
+        </div>
       </div>
 
     </div>
@@ -80,62 +112,92 @@
 
     <div class="proj-head">
       <span class="sec-label">Selected Work</span>
-      <span class="proj-hint">Scroll →</span>
     </div>
 
-    <div class="proj-track" id="projTrack">
+    <div class="proj-stack">
 
+      <!-- Card 01 — C-DataBase -->
       <article class="proj-card">
-        <div class="pc-top">
-          <span class="pc-num">01</span>
-          <a class="pc-arrow" href="[GITHUB URL 1]" target="_blank" rel="noopener" aria-label="View [PROJECT TITLE 1] on GitHub">↗</a>
-        </div>
-        <h3 class="pc-title">[PROJECT TITLE 1]</h3>
-        <p class="pc-desc">[ONE LINE DESCRIPTION 1]</p>
-        <div class="pc-tech">
-          <span>[TECH 1]</span>
-          <span>[TECH 2]</span>
-          <span>[TECH 3]</span>
+        <span class="pc-watermark" aria-hidden="true">01</span>
+        <div class="pc-inner">
+          <div class="pc-meta">
+            <span class="pc-num">01 / 03</span>
+            <a class="pc-arrow" href="https://github.com/diegojrobles/C-DataBase" target="_blank" rel="noopener" aria-label="C-DataBase on GitHub">↗</a>
+          </div>
+          <div class="pc-cols">
+            <div class="pc-left">
+              <h3 class="pc-title">C-DataBase</h3>
+            </div>
+            <div class="pc-right">
+              <p class="pc-tagline">A relational database engine built from scratch in C — no libraries, no abstractions.</p>
+              <p class="pc-desc">Defines a fixed schema, parses INSERT and SELECT through a hand-written statement parser, and manages memory by splitting rows across 4KB pages — the same page-size model used by SQLite. Rows are serialized to raw memory using byte-offset arithmetic.</p>
+              <div class="pc-tech">
+                <span>C</span>
+                <span>Memory Management</span>
+                <span>Paging</span>
+                <span>Serialization</span>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
+      <!-- Card 02 — AI Doctor Chatbot -->
       <article class="proj-card">
-        <div class="pc-top">
-          <span class="pc-num">02</span>
-          <a class="pc-arrow" href="[GITHUB URL 2]" target="_blank" rel="noopener" aria-label="View [PROJECT TITLE 2] on GitHub">↗</a>
-        </div>
-        <h3 class="pc-title">[PROJECT TITLE 2]</h3>
-        <p class="pc-desc">[ONE LINE DESCRIPTION 2]</p>
-        <div class="pc-tech">
-          <span>[TECH 1]</span>
-          <span>[TECH 2]</span>
-          <span>[TECH 3]</span>
+        <span class="pc-watermark" aria-hidden="true">02</span>
+        <div class="pc-inner">
+          <div class="pc-meta">
+            <span class="pc-num">02 / 03</span>
+            <a class="pc-arrow" href="https://github.com/diegojrobles/AI-Doctor-Chatbot" target="_blank" rel="noopener" aria-label="AI Doctor Chatbot on GitHub">↗</a>
+          </div>
+          <div class="pc-cols">
+            <div class="pc-left">
+              <h3 class="pc-title">AI Doctor Chatbot</h3>
+            </div>
+            <div class="pc-right">
+              <p class="pc-tagline">A safety-first mobile health assistant that triages symptoms before it ever touches an LLM.</p>
+              <p class="pc-desc">Runs symptoms through a red-flag triage engine first — stroke, chest pain, anaphylaxis — before calling Llama 3.3 70B via OpenRouter. Includes RAG with ChromaDB, PubMed integration, FHIR data models, role-based access, and medication filter guardrails.</p>
+              <div class="pc-tech">
+                <span>React Native</span>
+                <span>TypeScript</span>
+                <span>FastAPI</span>
+                <span>Python</span>
+                <span>ChromaDB</span>
+                <span>Docker</span>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
+      <!-- Card 03 — AI Server -->
       <article class="proj-card">
-        <div class="pc-top">
-          <span class="pc-num">03</span>
-          <a class="pc-arrow" href="[GITHUB URL 3]" target="_blank" rel="noopener" aria-label="View [PROJECT TITLE 3] on GitHub">↗</a>
-        </div>
-        <h3 class="pc-title">[PROJECT TITLE 3]</h3>
-        <p class="pc-desc">[ONE LINE DESCRIPTION 3]</p>
-        <div class="pc-tech">
-          <span>[TECH 1]</span>
-          <span>[TECH 2]</span>
-          <span>[TECH 3]</span>
+        <span class="pc-watermark" aria-hidden="true">03</span>
+        <div class="pc-inner">
+          <div class="pc-meta">
+            <span class="pc-num">03 / 03</span>
+            <a class="pc-arrow" href="https://github.com/diegojrobles/AI-Server" target="_blank" rel="noopener" aria-label="AI Server on GitHub">↗</a>
+          </div>
+          <div class="pc-cols">
+            <div class="pc-left">
+              <h3 class="pc-title">AI Server</h3>
+            </div>
+            <div class="pc-right">
+              <p class="pc-tagline">A production-ready Flask API for serving transformer models — auth, rate limiting, Docker included.</p>
+              <p class="pc-desc">Exposes a clean REST interface for HuggingFace transformer models with API key auth, per-IP rate limiting (100 req/hr global, 10/min inference), CORS, and structured logging. Ships with docker-compose, GitHub Actions CI, and a test suite.</p>
+              <div class="pc-tech">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>HuggingFace</span>
+                <span>Docker</span>
+                <span>REST API</span>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
-      <!-- trailing spacer so last card isn't flush to viewport edge -->
-      <div class="proj-spacer" aria-hidden="true"></div>
-
     </div>
-
-    <div class="proj-progress-bar">
-      <div class="proj-progress-fill" id="projFill"></div>
-    </div>
-
   </section>
 
   <!-- ══ EXPERIENCE ══════════════════════════════════════════ -->
@@ -147,39 +209,30 @@
       <div class="timeline">
 
         <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <span class="tl-role">[ROLE TITLE 1]</span>
-              <span class="tl-date">[DATE RANGE 1]</span>
-            </div>
-            <p class="tl-org">[COMPANY / ORG 1]</p>
-            <p class="tl-desc">[1–2 lines. Lead with impact, then method. Numbers if you have them.]</p>
+          <div class="tl-top">
+            <span class="tl-role">[ROLE TITLE 1]</span>
+            <span class="tl-date">[DATE RANGE 1]</span>
           </div>
+          <p class="tl-org">[COMPANY / ORG 1]</p>
+          <p class="tl-desc">[1–2 lines. Lead with impact, then method. Numbers if you have them.]</p>
         </div>
 
         <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <span class="tl-role">[ROLE TITLE 2]</span>
-              <span class="tl-date">[DATE RANGE 2]</span>
-            </div>
-            <p class="tl-org">[COMPANY / ORG 2]</p>
-            <p class="tl-desc">[1–2 lines.]</p>
+          <div class="tl-top">
+            <span class="tl-role">[ROLE TITLE 2]</span>
+            <span class="tl-date">[DATE RANGE 2]</span>
           </div>
+          <p class="tl-org">[COMPANY / ORG 2]</p>
+          <p class="tl-desc">[1–2 lines.]</p>
         </div>
 
         <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <span class="tl-role">[ROLE TITLE 3]</span>
-              <span class="tl-date">[DATE RANGE 3]</span>
-            </div>
-            <p class="tl-org">[COMPANY / ORG / COURSE — label honestly if academic]</p>
-            <p class="tl-desc">[1–2 lines.]</p>
+          <div class="tl-top">
+            <span class="tl-role">[ROLE TITLE 3]</span>
+            <span class="tl-date">[DATE RANGE 3]</span>
           </div>
+          <p class="tl-org">[COMPANY / ORG 3]</p>
+          <p class="tl-desc">[1–2 lines.]</p>
         </div>
 
       </div>
@@ -192,12 +245,15 @@
       <span class="sec-label">Contact</span>
       <a class="contact-email" href="mailto:[EMAIL]">[EMAIL]</a>
       <div class="contact-links">
-        <a href="[GITHUB URL]" target="_blank" rel="noopener">GitHub</a>
-        <span aria-hidden="true">·</span>
-        <a href="[LINKEDIN URL]" target="_blank" rel="noopener">LinkedIn</a>
-        <span aria-hidden="true">·</span>
-        <a href="[RESUME PDF URL]" target="_blank" rel="noopener">Resume</a>
+        <a class="btn btn-ghost" href="https://github.com/diegojrobles" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/diegojrobles44/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-accent" href="[RESUME_URL]" target="_blank" rel="noopener">Resume ↗</a>
       </div>
+    </div>
+
+    <div class="footer-bar">
+      <p>© 2026 Diego Robles</p>
+      <p>Built with HTML · CSS · JS</p>
     </div>
   </section>
 
