@@ -623,6 +623,22 @@ img { display: block; max-width: 100%; }
   color: var(--muted);
 }
 
+.cert-verify {
+  display: inline-block;
+  margin-top: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-hi);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cert-verify:hover {
+  color: var(--fg);
+  border-color: currentColor;
+}
+
 /* ================================================================
    CONTACT + FOOTER
 ================================================================ */
