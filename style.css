@@ -414,46 +414,18 @@ img { display: block; max-width: 100%; }
 
 .now-logo {
   flex-shrink: 0;
-  width: 54px; height: 54px;
-  border-radius: 14px;
+  width: 38px; height: 38px;
+  border-radius: 10px;
   background: #f7f7f5;
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7px;
+  padding: 5px;
   overflow: hidden;
 }
 
 .now-logo img { width: 100%; height: 100%; object-fit: contain; }
-
-.now-live {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  margin-top: 0.35rem;
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #6ee7a0;
-  border: 1px solid color-mix(in srgb, #6ee7a0 30%, transparent);
-  border-radius: var(--r-pill);
-  padding: 0.35em 0.8em;
-}
-
-.now-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: #6ee7a0;
-  box-shadow: 0 0 8px rgba(110, 231, 160, 0.7);
-  animation: pulse 2.4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0.35; }
-}
 
 .now-title {
   font-size: clamp(1.5rem, 3vw, 2rem);
