@@ -414,15 +414,10 @@ img { display: block; max-width: 100%; }
 
 .now-logo {
   flex-shrink: 0;
-  width: 38px; height: 38px;
-  border-radius: 10px;
-  background: #f7f7f5;
-  border: 1px solid var(--border);
+  width: 30px; height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
-  overflow: hidden;
 }
 
 .now-logo img { width: 100%; height: 100%; object-fit: contain; }
