@@ -629,6 +629,14 @@ img { display: block; max-width: 100%; }
   overflow: hidden;
 }
 
+/* logos that carry their own dark background fill the tile edge to edge */
+.tl-logo-fill {
+  background: none;
+  padding: 0;
+}
+
+.tl-logo-fill img { object-fit: cover !important; }
+
 .tl-logo img {
   width: 100%; height: 100%;
   object-fit: contain;
