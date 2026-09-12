@@ -673,6 +673,7 @@ img { display: block; max-width: 100%; }
 /* ── DevFest highlight card ─────────────────────────────── */
 .feature-card {
   margin-top: 3.5rem;
+
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   background: var(--surface);
@@ -690,6 +691,8 @@ img { display: block; max-width: 100%; }
   width: 100%; height: 100%;
   object-fit: cover;
 }
+
+.feature-card + .feature-card { margin-top: 1.25rem; }
 
 .feature-media.no-img { display: none; }
 .feature-card:has(.feature-media.no-img) { grid-template-columns: 1fr; }
