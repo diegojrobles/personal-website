@@ -475,50 +475,6 @@ img { display: block; max-width: 100%; }
   padding: 0.3em 0.8em;
 }
 
-/* what's next */
-.now-next {
-  margin-top: 1.75rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-}
-
-.now-next-label {
-  font-family: var(--mono);
-  font-size: 0.64rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.9rem;
-}
-
-.now-next-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  max-width: 46rem;
-}
-
-.now-next-list li {
-  position: relative;
-  padding-left: 1.4rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.now-next-list li::before {
-  content: '';
-  position: absolute;
-  left: 0.15rem;
-  top: 0.62em;
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: #6ee7a0;
-  opacity: 0.75;
-}
-
 /* ================================================================
    PROJECTS
 ================================================================ */
