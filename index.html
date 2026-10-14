@@ -8,331 +8,327 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ══ NAV ════════════════════════════════════════════════ -->
-  <header id="nav">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">DR<span class="nav-accent">.</span></a>
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#now">Featured</a>
-        <a href="#projects">Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="btn btn-sm btn-solid nav-cta" href="assets/Diego_Robles_Resume2026.pdf" target="_blank" rel="noopener">Resume</a>
-    </div>
+  <!-- ══ MOBILE TOP BAR ═════════════════════════════════════ -->
+  <header class="topbar">
+    <a href="#home" class="topbar-name">Diego Robles</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sidebar">
+      <span class="menu-btn-label">Menu</span>
+      <span class="menu-btn-bars" aria-hidden="true"><i></i><i></i></span>
+    </button>
   </header>
 
-  <!-- ══ HERO ════════════════════════════════════════════════ -->
-  <section id="hero">
-    <div class="hero-grid">
-
-      <div class="hero-copy reveal">
-        <h1 class="hero-name">Diego Jose Robles&nbsp;Costa</h1>
-        <p class="hero-tagline">CS undergraduate at the University of South Florida building full-stack and AI software — multi-tenant web platforms, model-serving APIs, and the infrastructure behind them.</p>
-        <div class="hero-actions">
-          <a class="btn btn-solid" href="#projects">View work</a>
-          <a class="btn btn-ghost" href="assets/Diego_Robles_Resume2026.pdf" target="_blank" rel="noopener">Resume</a>
-          <a class="btn btn-icon" href="https://github.com/diegojrobles" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 16 16" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-          </a>
-          <a class="btn btn-icon" href="https://www.linkedin.com/in/diegojrobles44/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
-          </a>
-        </div>
-        <p class="hero-meta">Tampa, FL &nbsp;·&nbsp; B.S. Computer Science, University of South Florida</p>
-      </div>
-
-      <div class="hero-portrait reveal">
-        <span class="hp-fallback" aria-hidden="true">DR</span>
+  <!-- ══ SIDEBAR ═══════════════════════════════════════════ -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sb-profile">
+      <div class="sb-avatar">
+        <span aria-hidden="true">DR</span>
         <img src="assets/images/headshot.jpg" alt="Diego Robles Costa" onerror="this.remove()" />
       </div>
-
+      <p class="sb-name">Diego Robles Costa</p>
+      <p class="sb-role">Software Engineer</p>
     </div>
-  </section>
 
-  <!-- ══ ABOUT ═══════════════════════════════════════════════ -->
-  <section id="about">
-    <div class="section-inner reveal">
-      <div class="about-body">
-        <span class="sec-label">About</span>
+    <nav class="sb-nav" aria-label="Primary">
+      <a href="#home" data-section="home">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+        Home
+      </a>
+      <a href="#about" data-section="about">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7z"/></svg>
+        About
+      </a>
+      <a href="#experience" data-section="experience">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6V4h6v2h5a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm2 0h2V5.5h-2z"/></svg>
+        Experience
+      </a>
+      <a href="#now" data-section="now">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z"/></svg>
+        Featured
+      </a>
+      <a href="#projects" data-section="projects">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>
+        Projects
+      </a>
+      <a href="#certifications" data-section="certifications">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v12l-7 6-7-6zm3.5 6.5 2.5 2.5 4.5-4.5-1.4-1.4-3.1 3.1-1.1-1.1z"/></svg>
+        Credentials
+      </a>
+      <a href="#contact" data-section="contact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zm2 2v.5l7 4.5 7-4.5V7z"/></svg>
+        Contact
+      </a>
+    </nav>
+
+    <div class="sb-foot">
+      <a class="sb-resume" href="assets/Diego_Robles_Resume2026.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      <div class="sb-social">
+        <a href="https://github.com/diegojrobles" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/diegojrobles44/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+        </a>
+        <a href="mailto:djrobles444@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zm2 2v.5l7 4.5 7-4.5V7z"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- ══ HERO ════════════════════════════════════════════ -->
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Tampa, FL &nbsp;/&nbsp; University of South Florida</p>
+        <h1 class="hero-title reveal">
+          <span class="ht-line">Hi, I'm Diego</span>
+          <span class="ht-line">Robles Costa.</span>
+          <span class="ht-line ht-accent">Software Engineer</span>
+        </h1>
+        <p class="hero-tagline reveal">CS undergraduate at the University of South Florida building full-stack and AI software — multi-tenant web platforms, model-serving APIs, and the infrastructure behind them.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-solid" href="#projects">View work</a>
+          <a class="btn btn-line" href="assets/Diego_Robles_Resume2026.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+        <p class="hero-meta reveal">B.S. Computer Science, University of South Florida</p>
+      </div>
+
+      <div class="hero-art reveal" aria-hidden="false">
+        <span class="slab slab-a" aria-hidden="true"></span>
+        <span class="slab slab-b" aria-hidden="true"></span>
+        <span class="ring" aria-hidden="true"></span>
+        <div class="hero-photo">
+          <span class="hp-fallback" aria-hidden="true">DR</span>
+          <img src="assets/images/headshot.jpg" alt="Diego Robles Costa" onerror="this.remove()" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ ABOUT ═══════════════════════════════════════════ -->
+    <section id="about" class="block">
+      <header class="block-head reveal">
+        <span class="sec-label"><b>01</b> About</span>
         <h2 class="sec-title">Building software end to end</h2>
-        <p class="about-p">I'm a computer science student at USF who builds software end to end: a multi-tenant recruiting platform on React, TypeScript, and Postgres, backend and infrastructure work on an LLM healthcare app presented at Google DevFest, and a model-serving REST API with its own CI and secret-scanning pipeline. I work hands-on with Python, TypeScript, SQL, and C, and I care about the parts most people skip — row-level security, offline test suites, and keeping secrets out of the browser. I'm looking for a software engineering internship building AI and accelerated-computing products.</p>
-      </div>
-    </div>
+      </header>
 
-    <div class="section-inner skills-wrap">
+      <p class="about-p reveal">I'm a computer science student at USF who builds software end to end: a multi-tenant recruiting platform on React, TypeScript, and Postgres, backend and infrastructure work on an LLM healthcare app presented at Google DevFest, and a model-serving REST API with its own CI and secret-scanning pipeline. I work hands-on with Python, TypeScript, SQL, and C, and I care about the parts most people skip — row-level security, offline test suites, and keeping secrets out of the browser. I'm looking for a software engineering internship building AI and accelerated-computing products.</p>
 
-      <div class="skill-group reveal" style="--acc: #7db8ff;">
-        <div class="sg-head">
-          <span class="sg-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </span>
+      <div class="skills">
+        <div class="skill-col reveal">
           <h3>Languages</h3>
+          <ul>
+            <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>C</li><li>C++</li><li>C#</li><li>HTML/CSS</li>
+          </ul>
         </div>
-        <div class="chips">
-          <span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">C#</span><span class="chip">HTML/CSS</span>
-        </div>
-      </div>
-
-      <div class="skill-group reveal" style="--acc: #c49bff;">
-        <div class="sg-head">
-          <span class="sg-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.7a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/></svg>
-          </span>
+        <div class="skill-col reveal">
           <h3>AI / ML</h3>
+          <ul>
+            <li>LLM integration</li><li>Transformer model serving</li><li>DistilBERT / Hugging Face</li><li>Vector stores &amp; retrieval</li><li>Chroma</li><li>Prompt engineering</li>
+          </ul>
         </div>
-        <div class="chips">
-          <span class="chip">LLM integration</span><span class="chip">Transformer model serving</span><span class="chip">DistilBERT / Hugging Face</span><span class="chip">Vector stores &amp; retrieval</span><span class="chip">Chroma</span><span class="chip">Prompt engineering</span>
-        </div>
-      </div>
-
-      <div class="skill-group reveal" style="--acc: #7fe0b2;">
-        <div class="sg-head">
-          <span class="sg-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          </span>
+        <div class="skill-col reveal">
           <h3>Backend &amp; Systems</h3>
+          <ul>
+            <li>PostgreSQL</li><li>Row-level security</li><li>REST API design</li><li>FastAPI</li><li>Flask</li><li>Serverless functions</li><li>OAuth 2.0</li><li>Caching &amp; quota control</li><li>Rate limiting</li><li>Docker</li><li>GitHub Actions</li><li>pytest</li><li>Node.js</li>
+          </ul>
         </div>
-        <div class="chips">
-          <span class="chip">PostgreSQL</span><span class="chip">Row-level security</span><span class="chip">REST API design</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Serverless functions</span><span class="chip">OAuth 2.0</span><span class="chip">Caching &amp; quota control</span><span class="chip">Rate limiting</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span><span class="chip">pytest</span><span class="chip">Node.js</span>
-        </div>
-      </div>
-
-      <div class="skill-group reveal" style="--acc: #ffb37d;">
-        <div class="sg-head">
-          <span class="sg-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-          </span>
+        <div class="skill-col reveal">
           <h3>Tools &amp; Systems</h3>
-        </div>
-        <div class="chips">
-          <span class="chip">Git</span><span class="chip">Linux / CLI</span><span class="chip">React</span><span class="chip">React Native</span><span class="chip">Supabase</span><span class="chip">Microsoft Graph API</span><span class="chip">AWS (EC2, SSM)</span><span class="chip">Azure / Entra ID</span><span class="chip">Windows Server</span><span class="chip">Active Directory</span>
+          <ul>
+            <li>Git</li><li>Linux / CLI</li><li>React</li><li>React Native</li><li>Supabase</li><li>Microsoft Graph API</li><li>AWS (EC2, SSM)</li><li>Azure / Entra ID</li><li>Windows Server</li><li>Active Directory</li>
+          </ul>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ══ EXPERIENCE ══════════════════════════════════════ -->
+    <section id="experience" class="block">
+      <header class="block-head reveal">
+        <span class="sec-label"><b>02</b> Experience</span>
+        <h2 class="sec-title">Where I've worked</h2>
+      </header>
 
-  <!-- ══ EXPERIENCE ══════════════════════════════════════════ -->
-  <section id="experience">
-    <div class="section-inner">
-      <span class="sec-label reveal">Experience</span>
-      <h2 class="sec-title reveal">Where I've worked</h2>
-
-      <div class="timeline">
-
-        <div class="tl-item reveal">
-          <div class="tl-logo">
-            <img src="assets/images/shpe-logo.jpg" alt="SHPE logo" onerror="this.parentElement.remove()" />
-          </div>
+      <ol class="timeline">
+        <li class="tl-item reveal">
+          <div class="tl-logo"><img src="assets/images/shpe-logo.jpg" alt="SHPE logo" onerror="this.parentElement.remove()" /></div>
           <div class="tl-body">
-            <div class="tl-top">
-              <h3 class="tl-role">Outreach Director — Society of Hispanic Professional Engineers</h3>
-              <span class="tl-date">Sep 2026 – Present · Tampa, FL</span>
-            </div>
+            <span class="tl-date">Sep 2026 – Present · Tampa, FL</span>
+            <h3 class="tl-role">Outreach Director — Society of Hispanic Professional Engineers</h3>
             <p class="tl-desc">Lead corporate outreach for USF's SHPE chapter, securing sponsorship from major technology companies to fund Hackabull, the chapter's hackathon. Manage the sponsorship pipeline from first contact through commitment while building relationships with company recruiters and engineering teams.</p>
           </div>
-        </div>
+        </li>
 
-        <div class="tl-item reveal">
-          <div class="tl-logo">
-            <img src="assets/images/ws-development.svg" alt="WS Development logo" onerror="this.parentElement.remove()" />
-          </div>
+        <li class="tl-item reveal">
+          <div class="tl-logo"><img src="assets/images/ws-development.svg" alt="WS Development logo" onerror="this.parentElement.remove()" /></div>
           <div class="tl-body">
-            <div class="tl-top">
-              <h3 class="tl-role">IT Intern — WS Development</h3>
-              <span class="tl-date">Jul – Aug 2026 · Boston, MA</span>
-            </div>
+            <span class="tl-date">Jul – Aug 2026 · Boston, MA</span>
+            <h3 class="tl-role">IT Intern — WS Development</h3>
             <p class="tl-desc">Administered 511 user identities across Windows Server, on-premises Active Directory, and Azure/Entra ID hybrid environments spanning 100+ properties and 400+ tenant companies. Scripted Group Policy deployment of Claude Co-Work to 500+ employees across Active Directory and helped build a Claude Skills library distributed through SharePoint. Remediated 193 NinjaOne-flagged vulnerabilities while working from a queue of roughly 200 weekly tickets.</p>
           </div>
-        </div>
+        </li>
 
-        <div class="tl-item reveal">
-          <div class="tl-logo tl-logo-fill">
-            <img src="assets/images/gca-logo.jpg" alt="Global Career Accelerator logo" onerror="this.parentElement.remove()" />
-          </div>
+        <li class="tl-item reveal">
+          <div class="tl-logo tl-logo-fill"><img src="assets/images/gca-logo.jpg" alt="Global Career Accelerator logo" onerror="this.parentElement.remove()" /></div>
           <div class="tl-body">
-            <div class="tl-top">
-              <h3 class="tl-role">Cooperative Internship, Python &amp; Database Development — Global Career Accelerator</h3>
-              <span class="tl-date">Aug 2026 – Present · Tampa, FL</span>
-            </div>
+            <span class="tl-date">Aug 2026 – Present · Tampa, FL</span>
+            <h3 class="tl-role">Cooperative Internship, Python &amp; Database Development — Global Career Accelerator</h3>
             <p class="tl-desc">Selected for the Global Career Accelerator, a competitive internship program through USF focused on Python and database development, including a project with Intel analyzing data for real-world business cases. Collaborate with peers and industry experts in interactive, team-based sessions to solve technical problems and deliver structured project assignments.</p>
           </div>
-        </div>
+        </li>
 
-        <div class="tl-item reveal">
-          <div class="tl-logo">
-            <img src="assets/images/gdg-logo.svg" alt="Google Developer Group logo" onerror="this.parentElement.remove()" />
-          </div>
+        <li class="tl-item reveal">
+          <div class="tl-logo"><img src="assets/images/gdg-logo.svg" alt="Google Developer Group logo" onerror="this.parentElement.remove()" /></div>
           <div class="tl-body">
-            <div class="tl-top">
-              <h3 class="tl-role">Backend Developer Mentorship Program — Google Developer Group</h3>
-              <span class="tl-date">Aug – Nov 2025 · Tampa, FL</span>
-            </div>
+            <span class="tl-date">Aug – Nov 2025 · Tampa, FL</span>
+            <h3 class="tl-role">Backend Developer Mentorship Program — Google Developer Group</h3>
             <p class="tl-desc">Selected as 1 of 20 students for GDG Tampa's AI/ML and cybersecurity mentorship, building a healthcare application in Python under weekly mentor code review, and continued contributing to the codebase after the program ended.</p>
           </div>
-        </div>
+        </li>
+      </ol>
 
-      </div>
-
-      <!-- DevFest highlight -->
-      <div class="feature-card reveal">
-        <div class="feature-media">
-          <img src="assets/images/devfest-2025.jpg" alt="Diego with his team at Google DevFest" onerror="this.parentElement.classList.add('no-img')" />
-        </div>
-        <div class="feature-body">
-          <span class="feature-tag">Highlight</span>
-          <h3 class="feature-title">Presenting AI Doctor App at Google DevFest</h3>
-          <p class="feature-desc">Last November at Google DevFest, we presented our AI Doctor App, the healthcare application my team and I built throughout the GDG mentorship program. Showcasing it to developers and industry professionals, and hearing their feedback on our architecture and user experience, it was an incredible experience.</p>
-          <p class="feature-desc">The event offered more than the presentation itself. Hearing from experienced engineers and founders gave me new insight into model integration, responsible deployment, and how to position technical projects in a professional setting. I left motivated to keep improving the project.</p>
-        </div>
-      </div>
-
-      <div class="feature-card reveal">
-        <div class="feature-media">
-          <img src="assets/images/ws-internship.jpg" alt="Diego at the WS Development office" onerror="this.parentElement.classList.add('no-img')" />
-        </div>
-        <div class="feature-body">
-          <span class="feature-tag">Highlight</span>
-          <h3 class="feature-title">Completing my IT internship at WS Development</h3>
-          <p class="feature-desc">This summer I wrapped up my IT internship at WS Development in Boston, working on the identity and security infrastructure behind 100+ retail and mixed-use properties and 400+ tenant companies. I administered 511 user identities across Windows Server, on-premises Active Directory, and Azure/Entra ID, and remediated 193 NinjaOne-flagged vulnerabilities in six weeks.</p>
-          <p class="feature-desc">Most of what I learned came from the ticket queue, roughly 200 a week of server, network, and authentication issues. Little of the work involved writing code; however, resolving authentication failures across distributed site networks gave me a formidably practical understanding of how enterprise systems hold together. Maintaining the infrastructure documentation as I went.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ NOW ═════════════════════════════════════════════════ -->
-  <section id="now">
-    <div class="section-inner">
-      <span class="sec-label reveal">Featured</span>
-      <h2 class="sec-title reveal">The project I've learned the most from</h2>
-
-      <article class="now-card reveal">
-        <div class="now-head">
-          <div class="now-title-row">
-            <div class="now-logo">
-              <img src="assets/images/offr-mark.svg" alt="Offr+ logo" onerror="this.parentElement.remove()" />
-            </div>
-            <h3 class="now-title">Offr+</h3>
+      <h3 class="sub-head reveal">Highlights</h3>
+      <div class="highlights">
+        <article class="hl-card reveal">
+          <div class="hl-media">
+            <img src="assets/images/devfest-2025.jpg" alt="Diego with his team at Google DevFest" onerror="this.parentElement.classList.add('no-img')" />
           </div>
-          <a class="now-link" href="https://github.com/diegojrobles/OffrPlus" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
-        <p class="now-tagline">A networking pipeline for finance students to connect with and organize their network.</p>
-        <p class="now-desc">Offr+ started with friends. I was the one in the code while they generated ideas for features and produced the artwork. Contacts move through custom pipeline sections, follow-ups and coffee chats land on a calendar automatically, and applications and resume versions hang off the people who matter to them. It runs locally and was never deployed, so it has no users; however, the parts I had to get right to make it work at all, row-level security across thirteen tables, OAuth refresh tokens kept server side, and a shared cache holding a quota-limited API inside its free tier, taught me more than anything else I have built.</p>
-        <div class="now-tech">
-          <span>React</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span><span>OAuth 2.0</span><span>Microsoft Graph</span>
-        </div>
+          <div class="hl-body">
+            <h4 class="hl-title">Presenting AI Doctor App at Google DevFest</h4>
+            <p>Last November at Google DevFest, we presented our AI Doctor App, the healthcare application my team and I built throughout the GDG mentorship program. Showcasing it to developers and industry professionals, and hearing their feedback on our architecture and user experience, it was an incredible experience.</p>
+            <p>The event offered more than the presentation itself. Hearing from experienced engineers and founders gave me new insight into model integration, responsible deployment, and how to position technical projects in a professional setting. I left motivated to keep improving the project.</p>
+          </div>
+        </article>
 
+        <article class="hl-card reveal">
+          <div class="hl-media">
+            <img src="assets/images/ws-internship.jpg" alt="Diego at the WS Development office" onerror="this.parentElement.classList.add('no-img')" />
+          </div>
+          <div class="hl-body">
+            <h4 class="hl-title">Completing my IT internship at WS Development</h4>
+            <p>This summer I wrapped up my IT internship at WS Development in Boston, working on the identity and security infrastructure behind 100+ retail and mixed-use properties and 400+ tenant companies. I administered 511 user identities across Windows Server, on-premises Active Directory, and Azure/Entra ID, and remediated 193 NinjaOne-flagged vulnerabilities in six weeks.</p>
+            <p>Most of what I learned came from the ticket queue, roughly 200 a week of server, network, and authentication issues. Little of the work involved writing code; however, resolving authentication failures across distributed site networks gave me a formidably practical understanding of how enterprise systems hold together. Maintaining the infrastructure documentation as I went.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══ FEATURED ════════════════════════════════════════ -->
+    <section id="now" class="block">
+      <header class="block-head reveal">
+        <span class="sec-label"><b>03</b> Featured</span>
+        <h2 class="sec-title">The project I've learned the most from</h2>
+      </header>
+
+      <article class="featured reveal">
+        <div class="ft-side">
+          <div class="ft-logo"><img src="assets/images/offr-mark.svg" alt="Offr+ logo" onerror="this.parentElement.remove()" /></div>
+          <h3 class="ft-title">Offr+</h3>
+          <p class="ft-tagline">A networking pipeline for finance students to connect with and organize their network.</p>
+          <a class="text-link" href="https://github.com/diegojrobles/OffrPlus" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+        <div class="ft-main">
+          <p>Offr+ started with friends. I was the one in the code while they generated ideas for features and produced the artwork. Contacts move through custom pipeline sections, follow-ups and coffee chats land on a calendar automatically, and applications and resume versions hang off the people who matter to them. It runs locally and was never deployed, so it has no users; however, the parts I had to get right to make it work at all, row-level security across thirteen tables, OAuth refresh tokens kept server side, and a shared cache holding a quota-limited API inside its free tier, taught me more than anything else I have built.</p>
+          <ul class="tags">
+            <li>React</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>OAuth 2.0</li><li>Microsoft Graph</li>
+          </ul>
+        </div>
       </article>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══ PROJECTS ════════════════════════════════════════════ -->
-  <section id="projects">
-    <div class="section-inner">
-      <span class="sec-label reveal">Selected work</span>
-      <h2 class="sec-title reveal">Projects</h2>
+    <!-- ══ PROJECTS ════════════════════════════════════════ -->
+    <section id="projects" class="block">
+      <header class="block-head reveal">
+        <span class="sec-label"><b>04</b> Selected work</span>
+        <h2 class="sec-title">Projects</h2>
+      </header>
 
-      <div class="proj-grid">
-
-        <article class="proj-card reveal">
-          <div class="pc-top">
-            <span class="pc-num">01</span>
-            <a class="pc-link" href="https://github.com/diegojrobles/OffrPlus" target="_blank" rel="noopener" aria-label="Offr+ on GitHub">↗</a>
+      <div class="proj-list">
+        <article class="proj reveal">
+          <span class="proj-num">01</span>
+          <div class="proj-body">
+            <h3 class="proj-title"><a href="https://github.com/diegojrobles/OffrPlus" target="_blank" rel="noopener">Offr+ — Networking Pipeline for Finance Students <span aria-hidden="true">↗</span></a></h3>
+            <p>A pipeline for moving and organizing contacts from cold outreach through to real connections. Eleven pages backed by 13 Postgres tables and 39 row-level security policies, so no session can reach another user's data. Three Supabase Edge Functions keep OAuth refresh tokens and API secrets server side while handling Microsoft Graph calendar sync, Teams meeting provisioning, and a job feed held under a 1,000-call monthly free tier by a shared 12-hour cache keyed on normalized queries. I built my skills with React, Postgres, and OAuth mostly by breaking this software apart and working out the problems. It runs locally and was never deployed.</p>
           </div>
-          <h3 class="pc-title">Offr+ — Networking Pipeline for Finance Students</h3>
-          <p class="pc-desc">A pipeline for moving and organizing contacts from cold outreach through to real connections. Eleven pages backed by 13 Postgres tables and 39 row-level security policies, so no session can reach another user's data. Three Supabase Edge Functions keep OAuth refresh tokens and API secrets server side while handling Microsoft Graph calendar sync, Teams meeting provisioning, and a job feed held under a 1,000-call monthly free tier by a shared 12-hour cache keyed on normalized queries. I built my skills with React, Postgres, and OAuth mostly by breaking this software apart and working out the problems. It runs locally and was never deployed.</p>
         </article>
 
-        <article class="proj-card reveal">
-          <div class="pc-top">
-            <span class="pc-num">02</span>
-            <a class="pc-link" href="https://github.com/diegojrobles/AI-Doctor-Chatbot-v2" target="_blank" rel="noopener" aria-label="AI Doctor on GitHub">↗</a>
+        <article class="proj reveal">
+          <span class="proj-num">02</span>
+          <div class="proj-body">
+            <h3 class="proj-title"><a href="https://github.com/diegojrobles/AI-Doctor-Chatbot-v2" target="_blank" rel="noopener">AI Doctor — Healthcare Chat Application <span aria-hidden="true">↗</span></a></h3>
+            <p>Backend and infrastructure work on a four-person mentorship team, continued after the program ended. Fixed an auth middleware bypass that had left every endpoint unauthenticated, added rate limiting to public endpoints, enforced a clinician-only role, and moved deployment secrets to AWS SSM. Wrote the medical corpus loader and retrieval evaluation harness for the Chroma vector store, built the AWS deployment stack, and presented the architecture at Google DevFest.</p>
+            <video class="proj-video" controls preload="none" poster="assets/videos/ai-doctor-poster.jpg" src="assets/videos/ai-doctor-demo.mp4" aria-label="AI Doctor app demo"></video>
           </div>
-          <h3 class="pc-title">AI Doctor — Healthcare Chat Application</h3>
-          <p class="pc-desc">Backend and infrastructure work on a four-person mentorship team, continued after the program ended. Fixed an auth middleware bypass that had left every endpoint unauthenticated, added rate limiting to public endpoints, enforced a clinician-only role, and moved deployment secrets to AWS SSM. Wrote the medical corpus loader and retrieval evaluation harness for the Chroma vector store, built the AWS deployment stack, and presented the architecture at Google DevFest.</p>
-          <video class="pc-video" controls preload="none" poster="assets/videos/ai-doctor-poster.jpg" src="assets/videos/ai-doctor-demo.mp4" aria-label="AI Doctor app demo"></video>
         </article>
 
-        <article class="proj-card reveal">
-          <div class="pc-top">
-            <span class="pc-num">03</span>
-            <a class="pc-link" href="https://github.com/diegojrobles/AI-Server" target="_blank" rel="noopener" aria-label="AI-Server on GitHub">↗</a>
+        <article class="proj reveal">
+          <span class="proj-num">03</span>
+          <div class="proj-body">
+            <h3 class="proj-title"><a href="https://github.com/diegojrobles/AI-Server" target="_blank" rel="noopener">AI-Server — Model Inference REST API <span aria-hidden="true">↗</span></a></h3>
+            <p>A Flask API serving a DistilBERT sentiment model behind API key authentication and per-client rate limiting, with health, predict, and model-listing endpoints. Moved model loading from import time to first use after the import chain began downloading a model, which had made the test suite impossible to run offline; added a handler injection seam so tests substitute a fake. Ships an offline pytest suite and a three-job GitHub Actions pipeline covering tests on Python 3.11 and 3.12, ruff lint, and a security job that scans full commit history for leaked secrets.</p>
           </div>
-          <h3 class="pc-title">AI-Server — Model Inference REST API</h3>
-          <p class="pc-desc">A Flask API serving a DistilBERT sentiment model behind API key authentication and per-client rate limiting, with health, predict, and model-listing endpoints. Moved model loading from import time to first use after the import chain began downloading a model, which had made the test suite impossible to run offline; added a handler injection seam so tests substitute a fake. Ships an offline pytest suite and a three-job GitHub Actions pipeline covering tests on Python 3.11 and 3.12, ruff lint, and a security job that scans full commit history for leaked secrets.</p>
         </article>
 
-        <article class="proj-card reveal">
-          <div class="pc-top">
-            <span class="pc-num">04</span>
-            <a class="pc-link" href="https://github.com/diegojrobles/C-DataBase" target="_blank" rel="noopener" aria-label="User Database in C on GitHub">↗</a>
+        <article class="proj reveal">
+          <span class="proj-num">04</span>
+          <div class="proj-body">
+            <h3 class="proj-title"><a href="https://github.com/diegojrobles/C-DataBase" target="_blank" rel="noopener">Email Database — In-Memory Record Store <span aria-hidden="true">↗</span></a></h3>
+            <p>My first project. A REPL-driven record store in C with a hand-written statement parser, fixed-layout row serialization, insert and select execution, and manual memory teardown.</p>
           </div>
-          <h3 class="pc-title">Email Database — In-Memory Record Store</h3>
-          <p class="pc-desc">My first project. A REPL-driven record store in C with a hand-written statement parser, fixed-layout row serialization, insert and select execution, and manual memory teardown.</p>
         </article>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══ CERTIFICATIONS ══════════════════════════════════════ -->
-  <section id="certifications">
-    <div class="section-inner">
-      <span class="sec-label reveal">Certifications</span>
-      <h2 class="sec-title reveal">Credentials</h2>
+    <!-- ══ CERTIFICATIONS ══════════════════════════════════ -->
+    <section id="certifications" class="block">
+      <header class="block-head reveal">
+        <span class="sec-label"><b>05</b> Certifications</span>
+        <h2 class="sec-title">Credentials</h2>
+      </header>
 
-      <div class="cert-grid">
-        <div class="cert-card reveal">
-          <div class="cert-badge">
-            <img src="assets/images/google-ai-essentials.png" alt="Google AI Essentials certificate badge" onerror="this.parentElement.classList.add('no-img')" />
-          </div>
-          <div class="cert-body">
+      <div class="certs">
+        <div class="cert reveal">
+          <div class="cert-badge"><img src="assets/images/google-ai-essentials.png" alt="Google AI Essentials certificate badge" onerror="this.parentElement.classList.add('no-img')" /></div>
+          <div>
             <h3 class="cert-name">Google AI Essentials</h3>
             <p class="cert-issuer">Google · Certificate of Completion</p>
           </div>
         </div>
-
-        <div class="cert-card reveal">
-          <div class="cert-badge">
-            <img src="assets/images/microsoft-logo.svg" alt="Microsoft certificate badge" onerror="this.parentElement.classList.add('no-img')" />
-          </div>
-          <div class="cert-body">
+        <div class="cert reveal">
+          <div class="cert-badge"><img src="assets/images/microsoft-logo.svg" alt="Microsoft certificate badge" onerror="this.parentElement.classList.add('no-img')" /></div>
+          <div>
             <h3 class="cert-name">C++ Programming Fundamentals</h3>
             <p class="cert-issuer">Microsoft · via Coursera · Aug 2026</p>
-            <a class="cert-verify" href="https://coursera.org/verify/D3EFCD17SYI6" target="_blank" rel="noopener">Verify credential ↗</a>
+            <a class="text-link" href="https://coursera.org/verify/D3EFCD17SYI6" target="_blank" rel="noopener">Verify credential ↗</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══ CONTACT ═════════════════════════════════════════════ -->
-  <section id="contact">
-    <div class="section-inner contact-inner reveal">
-      <span class="sec-label">Contact</span>
-      <h2 class="contact-headline">Let's Connect.</h2>
-      <a class="contact-email" href="mailto:djrobles444@gmail.com">djrobles444@gmail.com</a>
-      <div class="contact-links">
-        <a class="btn btn-ghost" href="https://github.com/diegojrobles" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/diegojrobles44/" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- ══ CONTACT ═════════════════════════════════════════ -->
+    <section id="contact" class="block contact">
+      <span class="sec-label reveal"><b>06</b> Contact</span>
+      <h2 class="contact-headline reveal">Let's Connect.</h2>
+      <a class="contact-email reveal" href="mailto:djrobles444@gmail.com">djrobles444@gmail.com</a>
+      <div class="contact-links reveal">
+        <a class="btn btn-line" href="https://github.com/diegojrobles" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/diegojrobles44/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-solid" href="assets/Diego_Robles_Resume2026.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
-    </div>
 
-    <footer class="footer-bar">
-      <p>© <span id="year">2026</span> Diego Jose Robles Costa</p>
-      <p>Built with HTML · CSS · JS</p>
-    </footer>
-  </section>
+      <footer class="footer">
+        <p>© <span id="year">2026</span> Diego Jose Robles Costa</p>
+        <p>Built with HTML · CSS · JS</p>
+      </footer>
+    </section>
+
+  </main>
 
   <script src="main.js"></script>
 </body>
