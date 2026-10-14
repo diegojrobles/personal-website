@@ -336,6 +336,28 @@ ul, ol { list-style: none; }
   border: 2px solid var(--blue);
   border-radius: 50%;
 }
+/* slow ambient motion for the hero shapes */
+.slab-a { animation: slab-a-drift 16s ease-in-out infinite; }
+.slab-b { animation: slab-b-drift 19s ease-in-out infinite; }
+.ring   { animation: ring-orbit 22s linear infinite; }
+
+@keyframes slab-a-drift {
+  0%, 100% { transform: rotate(-32deg) translate(0, 0); }
+  50%      { transform: rotate(-26deg) translate(-18px, 12px); }
+}
+@keyframes slab-b-drift {
+  0%, 100% { transform: rotate(-32deg) translate(0, 0); }
+  50%      { transform: rotate(-37deg) translate(16px, -10px); }
+}
+@keyframes ring-orbit {
+  0%   { transform: rotate(0deg)   translateX(14px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(14px) rotate(-360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slab-a, .slab-b, .ring { animation: none; }
+}
+
 .hero-photo {
   position: absolute;
   inset: 8% 8% 10% 10%;
