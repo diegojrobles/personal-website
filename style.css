@@ -198,9 +198,9 @@ ul, ol { list-style: none; }
   font-size: .74rem;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--fg-3);
+  color: var(--blue-text);
 }
-.sec-label b { color: var(--blue-text); font-weight: 500; }
+
 
 .sec-title {
   margin-top: .6rem;
