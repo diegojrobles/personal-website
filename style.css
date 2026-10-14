@@ -469,54 +469,6 @@ ul, ol { list-style: none; }
 .hl-body p + p { margin-top: .8rem; }
 
 /* ================================================================
-   FEATURED
-================================================================ */
-.featured {
-  display: grid;
-  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
-  background: var(--blue);
-  color: #fff;
-}
-.ft-side {
-  padding: 2.25rem;
-  border-right: 1px solid rgba(255,255,255,.25);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.ft-logo {
-  width: 56px; height: 56px;
-  background: var(--ink);
-  border-radius: 12px;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  margin-bottom: 1.5rem;
-}
-.ft-logo img { width: 100%; height: 100%; object-fit: cover; }
-.ft-title {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
-  line-height: 1;
-  letter-spacing: -0.03em;
-}
-.ft-tagline { margin-top: 1rem; font-size: 1rem; color: rgba(255,255,255,.88); }
-.ft-side .text-link { margin-top: auto; padding-top: 2rem; color: #fff; border: 0; text-decoration: underline; text-underline-offset: 4px; }
-.ft-side .text-link:hover { color: var(--ink); }
-.ft-main { padding: 2.25rem; }
-.ft-main p { font-size: 1.02rem; line-height: 1.7; }
-
-.tags { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: .45rem; }
-.tags li {
-  font-family: var(--mono);
-  font-size: .74rem;
-  padding: .3rem .65rem;
-  border: 1px solid rgba(255,255,255,.45);
-  border-radius: 3px;
-}
-
-/* ================================================================
    PROJECTS
 ================================================================ */
 .proj-list { border-top: 1px solid var(--line); }
@@ -686,10 +638,6 @@ ul, ol { list-style: none; }
   .block { padding-left: 16px; padding-right: 16px; }
 
   .highlights, .certs { grid-template-columns: 1fr; }
-  .featured { grid-template-columns: 1fr; }
-  .ft-side { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.25); padding: 1.75rem; }
-  .ft-side .text-link { margin-top: 1.5rem; padding-top: 0; }
-  .ft-main { padding: 1.75rem; }
 }
 
 @media (max-width: 560px) {
